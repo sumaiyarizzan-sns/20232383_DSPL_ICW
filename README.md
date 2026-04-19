@@ -1,8 +1,16 @@
-# 20232383_DSPL_ICW
+# 🌍 Global Food Crisis Dashboard (GRFC)
 
-Interactive Streamlit dashboard analysing global food crisis data (GRFC) from World Bank Data360.
+An interactive Streamlit dashboard analysing global acute food insecurity trends (2016–2025) using the **Global Report on Food Crises (GRFC)** dataset, published by the **Food Security Information Network (FSIN)** and mirrored on **World Bank Data360**. Developed for a global sustainability conference audience — high-level decision-makers, finance professionals, and technology experts.
 
-**Module:** 5DATA004C — Data Science Project Lifecycle (2025/26)
-**Student ID:** 20232383
+> **SDG alignment:** UN Sustainable Development Goal 2 — *Zero Hunger*, with cross-links to SDG 13 (Climate Action) and SDG 16 (Peace, Justice and Strong Institutions).
 
-_Full documentation and live dashboard links coming soon._
+---
+
+##  Module Information
+
+| Field | Value |
+|---|---|
+| **Module** | 5DATA004C — Data Science Project Lifecycle (2025/26) |
+| **Institution** | University of Westminster / Informatics Institute of Technology |
+| **Student ID** | 20232383 |
+| **Module Leader** | Mr. Fouzul Hassan |
