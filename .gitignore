@@ -1,0 +1,30 @@
+# ===== Python =====
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ===== IDE / editors =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== Operating System =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Streamlit =====
+.streamlit/secrets.toml
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+
+# ===== Logs / temp =====
+*.log
+*.tmp
