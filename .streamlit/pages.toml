@@ -1,0 +1,29 @@
+[[pages]]
+path = "app.py"
+name = "Overview"
+icon = "🌍"
+
+[[pages]]
+path = "pages/2_Geographic.py"
+name = "Geography"
+icon = "🗺️"
+
+[[pages]]
+path = "pages/3_Trends.py"
+name = "Trends"
+icon = "📈"
+
+[[pages]]
+path = "pages/4_Drivers.py"
+name = "Drivers"
+icon = "🎯"
+
+[[pages]]
+path = "pages/5_Data_Explorer.py"
+name = "Data"
+icon = "📋"
+
+[[pages]]
+path = "pages/6_About.py"
+name = "About"
+icon = "ℹ️"
