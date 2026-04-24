@@ -38,9 +38,7 @@ TREND_DEFAULTS = [
     "Sri Lanka", "Pakistan",             # economic belt
 ]
 
-SOURCE_FOOTER = """<div class="source-footer">
-  Academic project by Student for Data Science Project Lifecycle.
-</div>"""
+SOURCE_FOOTER = ""
 
 # UN 2024 world population estimate — for "1 in X" stat
 WORLD_POP_2024 = 8_100_000_000
