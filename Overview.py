@@ -243,7 +243,7 @@ with c_donut:
   <p class="section-cap">Primary cause, {year}.</p>
 </div>""", unsafe_allow_html=True)
 
-    drv_vals  = [dfp_yr[dfp_yr[D1] == d][P3N].sum() for d in DRIVERS]
+    drv_vals = [dfp_hero[dfp_hero[D1] == d][P3N].sum() for d in DRIVERS]
     total_drv = sum(drv_vals)
     fig_donut = go.Figure(go.Pie(
         labels=["Conflict", "Weather", "Economic"],
@@ -282,7 +282,7 @@ st.markdown("""
   Together these ten countries account for <em>nearly 70%</em> of the global crisis population.</p>
 </div>""", unsafe_allow_html=True)
 
-top10 = dfp_yr.dropna(subset=[P3N]).sort_values(P3N, ascending=False).head(10).sort_values(P3N)
+top10 = dfp_hero.dropna(subset=[P3N]).sort_values(P3N, ascending=False).head(10).sort_values(P3N)
 fig_bars = go.Figure(go.Bar(
     orientation="h",
     x=top10[P3N] / 1e6,
