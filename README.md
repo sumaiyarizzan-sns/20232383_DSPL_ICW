@@ -12,3 +12,8 @@ The dashboard is my individual coursework for the Data Science Project Lifecycle
 | Institution | University of Westminster / Informatics Institute of Technology |
 | Student ID | 20232383 |
 
+## Project Links
+
+- 🖥️ **Live Dashboard:** https://hunger-atlas.streamlit.app
+- 📹 **Video Demonstration:** _coming soon — link will be added before submission_
+- 💻 **GitHub Repository:** https://github.com/sumaiyarizzan-sns/20232383_DSPL_ICW
