@@ -106,13 +106,11 @@ with c_right:
 </div>""", unsafe_allow_html=True)
 
 # ── KPI strip ─────────────────────────────────────────────────────────────────
-k1, k2, k3, = st.columns(3, gap="medium")
+k1, k2, k3 = st.columns(3, gap="medium")
 kpi_data = [
-    (k1, "Change since 2016",  f"{'+' if delta_pct >= 0 else ''}{delta_pct}%", False, "01",
-         "Nearly three times the 2016 baseline."),
-    (k2, "Countries reporting", str(countries), False, "02", "Across seven world regions."),
-    (k3, "Phase 5 · Famine",   fmt_M(p5_total) if p5_total > 0 else "< 0.01M", True,  "03",
-         "Catastrophic hunger — tripled since 2020."),
+    (k1, "Change since 2016", f"{'+' if delta_pct >= 0 else ''}{delta_pct}%", False, "01", ""),
+    (k2, "Countries reporting", str(countries), False, "02", ""),
+    (k3, "Phase 5 · Famine", fmt_M(p5_total) if p5_total > 0 else "< 0.01M", True, "03", ""),
 ]
 for col_w, label, value, is_accent, idx, note in kpi_data:
     with col_w:
