@@ -170,52 +170,6 @@ for i in range(1, 7):
                         zeroline=False, dtick=25, row=1, col=i)
 st.plotly_chart(fig_sm, width="stretch", config=dict(displayModeBar=False))
 
-# ── FIG 11 + FIG 12 · Conflict belt / Weather belt ────────────────────────────
-c_conf, c_weat = st.columns(2, gap="large")
-
-def driver_top_chart(driver: str) -> go.Figure:
-    sub   = dfp_yr[dfp_yr[D1] == driver].sort_values(P3N, ascending=True).tail(8)
-    color = DRIVER_COLOR[driver]
-    max_x = sub[P3N].max() / 1e6 if len(sub) else 1
-    fig   = go.Figure(go.Bar(
-        orientation="h",
-  x=sub[P3N] / 1e6,
-        y=sub[COUNTRY],
-        marker=dict(color=color),
-        text=(sub[P3N] / 1e6).round(1).astype(str) + "M",
-        textposition="outside",
-        textfont=dict(family="Instrument Serif, Georgia, serif", size=12, color="#f3f5f8"),
-        hovertemplate="<b>%{y}</b><br>%{x:.1f}M people<extra></extra>",
-        cliponaxis=False,
-    ))
-    fig.update_layout(**base_plotly_layout(
-        height=340,
-        margin=dict(l=150, r=65, t=8, b=30),
-        xaxis=dict(gridcolor="rgba(255,255,255,0.07)", zeroline=False,
-                   tickfont=dict(size=11, color="#8b93a1"),
-                   ticksuffix="M", range=[0, max_x * 1.30], showgrid=True),
-        yaxis=dict(gridcolor="rgba(255,255,255,0.07)", zeroline=False,
-                   tickfont=dict(family="Space Grotesk, sans-serif", size=12, color="#f3f5f8"),
-                   automargin=True),
-        bargap=0.4,
-    ))
-    return fig
-
-for col_w, driver, title, fig_label in [
-    (c_conf, "Conflict/Insecurity", "The conflict belt", "FIG 11"),
-    (c_weat, "Weather Extremes",    "The weather belt",  "FIG 12"),
-]:
-    with col_w:
-        st.markdown(f"""
-<div class="glass-card">
-  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;">
-    <h2 class="section-h2">{title}</h2>
-    <span class="fig-label">{fig_label}</span>
-  </div>
-  <p class="section-cap">Top countries where {driver.split('/')[0].lower()} is the primary driver, {year}.</p>
-</div>""", unsafe_allow_html=True)
-        st.plotly_chart(driver_top_chart(driver), width="stretch",
-                        config=dict(displayModeBar=False))
 
 # ── Key finding — computed live ────────────────────────────────────────────────
 def driver_share(yr: int) -> dict:
