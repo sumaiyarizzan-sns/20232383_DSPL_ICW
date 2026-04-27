@@ -15,5 +15,4 @@ The dashboard is my individual coursework for the Data Science Project Lifecycle
 ## Project Links
 
 - 🖥️ **Live Dashboard:** https://hunger-atlas.streamlit.app
-- 📹 **Video Demonstration:** _coming soon — link will be added before submission_
-- 💻 **GitHub Repository:** https://github.com/sumaiyarizzan-sns/20232383_DSPL_ICW
+
